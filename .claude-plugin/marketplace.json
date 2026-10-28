@@ -1,0 +1,19 @@
+{
+  "name": "miximodel",
+  "owner": {
+    "name": "Miximodel",
+    "url": "https://miximodel.com"
+  },
+  "metadata": {
+    "description": "The official Miximodel plugin for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "miximodel",
+      "source": "./plugins/miximodel",
+      "description": "Manage your Miximodel portfolio, castings, tours and bookings from Claude Code.",
+      "category": "productivity",
+      "homepage": "https://miximodel.com/developers"
+    }
+  ]
+}

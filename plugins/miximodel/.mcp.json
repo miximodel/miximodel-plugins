@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "miximodel": {
+      "type": "http",
+      "url": "https://miximodel.com/mcp"
+    }
+  }
+}

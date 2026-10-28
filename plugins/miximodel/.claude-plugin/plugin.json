@@ -1,0 +1,12 @@
+{
+  "name": "miximodel",
+  "version": "1.0.0",
+  "description": "Manage your Miximodel portfolio, castings, tours and bookings from Claude Code.",
+  "author": {
+    "name": "Miximodel",
+    "url": "https://miximodel.com"
+  },
+  "homepage": "https://miximodel.com/developers",
+  "repository": "https://github.com/miximodel/claude-plugin",
+  "keywords": ["miximodel", "models", "photographers", "casting", "bookings", "mcp"]
+}
