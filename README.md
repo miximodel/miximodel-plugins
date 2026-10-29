@@ -14,8 +14,8 @@ No terminal is needed.
 /plugin install miximodel@miximodel
 ```
 
-The first tool call opens miximodel.com in your browser. Sign in, tick the permissions you
-want to grant, and approve.
+What the first connection asks you, and how to disconnect, are on
+https://miximodel.com/assistants.
 
 ## Layout
 
@@ -27,10 +27,6 @@ want to grant, and approve.
 
 The OpenAI package carries the same skill and logo as the Claude plugin: the build script
 copies them from `plugins/miximodel/`, so neither is committed twice.
-
-## Revoke
-
-Settings → Connected applications on miximodel.com lists every connection and revokes one.
 
 ## Documentation
 

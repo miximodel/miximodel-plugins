@@ -12,21 +12,15 @@ members who have never used a terminal.
 ## What it connects to
 
 The plugin talks to one remote server, Miximodel's hosted MCP server at
-`https://miximodel.com/mcp`, and nothing else. The first time a tool runs, a Miximodel page
-opens in your browser: sign in, tick what the assistant may do, and approve with your
-password. Reading is ticked for you; anything that changes your account is not.
+`https://miximodel.com/mcp`, and nothing else. What Miximodel asks you before it connects, and
+how to disconnect it, are on [the installation guide](https://miximodel.com/assistants).
 
 ## In Claude Code
 
 ```
-/plugin install miximodel --marketplace miximodel/claude-plugin
+/plugin marketplace add miximodel/claude-plugin
+/plugin install miximodel@miximodel
 ```
-
-## Disconnect
-
-On miximodel.com, open **Settings → Connected applications** and choose **Disconnect**. Removing
-the plugin from your assistant may leave its access in place; disconnecting it on Miximodel is
-what revokes it.
 
 ## Links
 
