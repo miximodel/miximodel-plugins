@@ -18,7 +18,7 @@ how to disconnect it, are on [the installation guide](https://miximodel.com/assi
 ## In Claude Code
 
 ```
-/plugin marketplace add miximodel/claude-plugin
+/plugin marketplace add miximodel/miximodel-plugins
 /plugin install miximodel@miximodel
 ```
 

@@ -1,14 +1,14 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "miximodel",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Manage your Miximodel portfolio, castings, tours and bookings from ChatGPT and Codex.",
   "author": {
     "name": "MakerLabs",
     "url": "https://miximodel.com"
   },
   "homepage": "https://miximodel.com/assistants",
-  "repository": "https://github.com/miximodel/claude-plugin",
+  "repository": "https://github.com/miximodel/miximodel-plugins",
   "license": "MIT",
   "keywords": ["miximodel", "models", "photographers", "casting", "bookings"],
   "extensions": {

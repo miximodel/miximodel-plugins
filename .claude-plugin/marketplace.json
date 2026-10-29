@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "miximodel",
-      "source": "./plugins/miximodel",
+      "source": "./claude",
       "category": "productivity"
     }
   ]

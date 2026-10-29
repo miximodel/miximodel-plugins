@@ -1,8 +1,8 @@
-# Miximodel plugin
+# Miximodel plugins
 
-The official [Miximodel](https://miximodel.com) plugin, published by MakerLabs. It connects
-Claude, ChatGPT and Codex to Miximodel's hosted MCP server and adds a skill that describes
-common workflows.
+The official [Miximodel](https://miximodel.com) plugins, published by MakerLabs: one for
+Claude, one for ChatGPT and Codex. Both connect the assistant to Miximodel's hosted MCP server
+and add a skill that describes common workflows.
 
 **Members:** follow [Use Miximodel from Claude or ChatGPT](https://miximodel.com/assistants).
 No terminal is needed.
@@ -10,7 +10,7 @@ No terminal is needed.
 ## Claude Code
 
 ```
-/plugin marketplace add miximodel/claude-plugin
+/plugin marketplace add miximodel/miximodel-plugins
 /plugin install miximodel@miximodel
 ```
 
@@ -21,12 +21,13 @@ https://miximodel.com/assistants.
 
 | Path | What it is |
 | --- | --- |
-| `plugins/miximodel/` | The Claude plugin, as submitted to Anthropic's directory. |
-| `openai/` | The OpenAI Agent Plugins manifest and MCP configuration. |
-| `scripts/build-openai.sh` | Builds `dist/miximodel-openai.zip` for OpenAI's plugin portal. |
+| `claude/` | The Claude plugin, as submitted to Anthropic's directory. The skill and the logo live here. |
+| `codex/` | The ChatGPT and Codex plugin manifest and MCP configuration, for OpenAI's plugin directory. |
+| `.claude-plugin/marketplace.json` | The Claude Code marketplace, which lists `claude/`. |
+| `scripts/build-codex.sh` | Builds `dist/miximodel-codex.zip` for OpenAI's plugin portal. |
 
-The OpenAI package carries the same skill and logo as the Claude plugin: the build script
-copies them from `plugins/miximodel/`, so neither is committed twice.
+The ChatGPT and Codex package carries the same skill and logo as the Claude plugin: the build
+script copies them from `claude/`, so neither is committed twice.
 
 ## Documentation
 
