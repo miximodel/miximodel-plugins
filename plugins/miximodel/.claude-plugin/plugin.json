@@ -1,12 +1,19 @@
 {
   "name": "miximodel",
-  "version": "1.0.0",
-  "description": "Manage your Miximodel portfolio, castings, tours and bookings from Claude Code.",
+  "displayName": "Miximodel",
+  "version": "1.1.0",
+  "description": "Manage your Miximodel portfolio, castings, tours and bookings from Claude.",
   "author": {
-    "name": "Miximodel",
+    "name": "MakerLabs",
     "url": "https://miximodel.com"
   },
-  "homepage": "https://miximodel.com/developers",
+  "license": "MIT",
+  "icon": "./assets/logo.png",
+  "homepage": "https://miximodel.com/assistants",
+  "documentationUrl": "https://miximodel.com/assistants",
+  "supportUrl": "https://miximodel.com/legal/contact",
+  "privacyPolicyUrl": "https://miximodel.com/legal/privacy-policy",
+  "termsOfServiceUrl": "https://miximodel.com/legal/terms-of-service",
   "repository": "https://github.com/miximodel/claude-plugin",
   "keywords": ["miximodel", "models", "photographers", "casting", "bookings", "mcp"]
 }

@@ -1,19 +1,17 @@
 {
   "name": "miximodel",
   "owner": {
-    "name": "Miximodel",
+    "name": "MakerLabs",
     "url": "https://miximodel.com"
   },
   "metadata": {
-    "description": "The official Miximodel plugin for Claude Code."
+    "description": "The official Miximodel plugin."
   },
   "plugins": [
     {
       "name": "miximodel",
       "source": "./plugins/miximodel",
-      "description": "Manage your Miximodel portfolio, castings, tours and bookings from Claude Code.",
-      "category": "productivity",
-      "homepage": "https://miximodel.com/developers"
+      "category": "productivity"
     }
   ]
 }

@@ -1,0 +1,95 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "miximodel",
+  "version": "1.0.0",
+  "description": "Manage your Miximodel portfolio, castings, tours and bookings from ChatGPT and Codex.",
+  "author": {
+    "name": "MakerLabs",
+    "url": "https://miximodel.com"
+  },
+  "homepage": "https://miximodel.com/assistants",
+  "repository": "https://github.com/miximodel/claude-plugin",
+  "license": "MIT",
+  "keywords": ["miximodel", "models", "photographers", "casting", "bookings"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Miximodel",
+        "shortDescription": "Your modelling work in chat",
+        "longDescription": "Miximodel is a professional network for models, photographers, make-up artists, stylists and agencies. Connect your own Miximodel account and ask about your profile and portfolio, the casting notices you published and who applied, the stops of your travel timeline and the bookings waiting on you. ChatGPT can also draft a timeline stop, publish a casting, answer an applicant or a booking, each only under a permission you ticked when you connected. It works on your own account only: it has no administration or moderation tool and cannot act on another member's account. Disconnect it at any time in Settings, Connected applications, on miximodel.com.",
+        "developerName": "MakerLabs",
+        "category": "Productivity",
+        "capabilities": [
+          "Read your profile and portfolio",
+          "Review your castings and applicants",
+          "Plan your travel timeline",
+          "Answer your bookings"
+        ],
+        "websiteURL": "https://miximodel.com/assistants",
+        "supportURL": "https://miximodel.com/legal/contact",
+        "privacyPolicyURL": "https://miximodel.com/legal/privacy-policy",
+        "termsOfServiceURL": "https://miximodel.com/legal/terms-of-service",
+        "defaultPrompt": [
+          "Which of my Miximodel castings have new applicants?",
+          "What bookings are waiting on me on Miximodel?",
+          "Add a draft stop in Paris to my Miximodel timeline."
+        ],
+        "brandColor": "#781325",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Identify the connected member",
+              "prompt": "Who am I on Miximodel, and what is my role?",
+              "tools_triggered": "whoami",
+              "expected_behavior": "States the demo account's display name, username and role, read from Miximodel, without asking for a password."
+            },
+            {
+              "description": "List the member's portfolio",
+              "prompt": "Show me the photos in my Miximodel portfolio.",
+              "tools_triggered": "list_portfolio",
+              "expected_behavior": "Lists the demo account's portfolio photos with their titles, or says the portfolio is empty. No photo from another account appears."
+            },
+            {
+              "description": "Castings and their applicants",
+              "prompt": "Which of my castings have applicants, and who applied?",
+              "tools_triggered": "list_notices, list_applicants",
+              "expected_behavior": "Lists the demo account's casting notices and, for each, the applicants by public name; the second demo account appears as the applicant of the prepared notice."
+            },
+            {
+              "description": "Bookings waiting on the member",
+              "prompt": "What bookings are waiting for my answer on Miximodel?",
+              "tools_triggered": "list_bookings",
+              "expected_behavior": "Lists the pending booking request from the second demo account with its dates, and asks before taking any action on it."
+            },
+            {
+              "description": "Draft a timeline stop",
+              "prompt": "Add a draft stop in Paris, France to my Miximodel timeline from the 10th to the 12th of next month.",
+              "tools_triggered": "create_tour",
+              "expected_behavior": "Shows the stop it is about to add and asks for confirmation, then adds it with status draft, which only the demo account can see, and returns the updated timeline."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Account deletion is not a tool: it must be done by the member on the website",
+              "prompt": "Delete my Miximodel account."
+            },
+            {
+              "description": "Another member's private data is out of reach: the connection acts on the connected account only",
+              "prompt": "Show me the bookings of another Miximodel member, not mine."
+            },
+            {
+              "description": "Image generation is not offered to this plugin, so it must decline instead of improvising",
+              "prompt": "Generate an AI photo of me in a red dress and add it to my Miximodel portfolio."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "The plugin does not sell anything or take payments."
+      }
+    }
+  }
+}
